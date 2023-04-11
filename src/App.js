@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Bravo from './components/Bravo';
+import Charlie from './components/Charlie'
 
 function App() {
+
+  let person = "Brady"
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>app</h1>
+      <Bravo personName={person}/>
+      <Bravo personName="Dave"/>
+      <Bravo personName="Katie"/>
+      <Bravo personName="Jess"/>
+      <Bravo personName="Erica"/>
+      <Charlie num={12}/>
+      <Charlie num={78}/>
+      
     </div>
   );
 }
