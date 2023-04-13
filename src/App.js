@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Bravo from './components/Bravo';
 import Charlie from './components/Charlie'
+import Delta from './components/Delta';
 
 function App() {
 const [userInput, setUserInput] = useState("")
@@ -12,7 +13,7 @@ const [complete, setComplete] = useState(false)
   let person = "Brady"
 
   const handleChange = (event) => {
-    setUserInput (event.target.value)
+    setName (event.target.value)
   }
 
   const handleClick = () => {
@@ -23,9 +24,8 @@ const [complete, setComplete] = useState(false)
   return (
     <div className="App">
       <h1>app {name}</h1>
-      <input placeholder="What's your name?" value={userInput} onChange={handleChange}/>
-      <button onClick={handleClick}>Change Name</button>
-      <Bravo personName={person}/>
+      <Delta changeName={handleChange}/>
+      <Bravo personName={name}/>
       <Bravo personName="Dave"/>
       <Bravo personName="Katie"/>
       <Bravo personName="Jess"/>
